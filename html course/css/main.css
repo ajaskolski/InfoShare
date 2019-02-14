@@ -2,7 +2,7 @@ body {
     font-family: Verdana;
 }
 article {
-    width: 800px;
+    width: 100%;
 }
 article header h1 {
     color: green;
@@ -12,36 +12,63 @@ article header p {
     color: white;
 }
 article figure {
-    width: 600px;
+
+    width: auto;
     border: 3px solid black;
     padding: 5px;
 }
 article figure img {
+    float: left;
     width: 100%;
 }
 
-nav ul {
+.site-nav {
     background-color: LightCyan;
     list-style: none;
     padding: 0;
     width: 200px;
     border: 1px solid LightBlue;
 }
-
-nav ul li {
+.site-nav .site-nav-item {
     border-bottom: 1px solid LightBlue;
     padding: 5px;
 }
-
-nav ul li:last-child {
-    border-bottom: none;
+.site-nav .site-nav-item:last-child {
+    border-bottom: 0;
 }
-
-nav ul li a {
+.site-nav .site-nav-item a {
     color: black;
     text-decoration: none;
 }
-
-nav ul li a:hover {
+.site-nav .site-nav-item a:hover {
     text-decoration: underline;
+}
+
+input[type="text"],
+input[type="email"] {
+    border: 1px solid blue;
+}
+
+.main-container {
+    max-width: 960px;
+    margin: auto;
+}
+.site-menu,
+.main-content,
+.sidebar {
+    float: left;
+}
+.site-menu,
+.sidebar {
+    width: 20%;
+}
+.main-content {
+    width: 60%;
+    background-color: Bisque;
+}
+.site-menu {
+    background-color: LightCyan;
+}
+.sidebar {
+    background-color: Gold;
 }
