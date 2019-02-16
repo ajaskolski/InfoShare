@@ -1,0 +1,13 @@
+.flex-container,
+.flex-container1,
+.flex-container2{
+    border: 1px solid blue;
+    display: flex;
+}
+
+.flex-item {
+    height: 150px;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    border: 1px solid red;
+}
