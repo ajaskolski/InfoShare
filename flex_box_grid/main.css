@@ -1,0 +1,44 @@
+.flex-grid
+{
+    border: 1px solid blue;
+    display: grid;
+    grid-template-rows: 80px 200px;
+}
+
+.item1{
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 1;
+    border: solid blue;
+}
+
+.item2{
+    grid-row: 1 / span 1;
+    grid-column: 2 / span 1;
+    border: solid blue;
+    justify-content: center;
+}
+
+.item3{
+    grid-row: 1 / span 1;
+    grid-column: 3 / span 1;
+    border: solid blue;
+}
+
+.item4{
+    grid-row: 2 / span 2;
+    grid-column: 1 / span 1;
+    border: solid blue;
+}
+
+.item5{
+    grid-row: 2 / span 2;
+    grid-column: 2 / span 1;
+    border: solid blue;
+}
+
+.item6{
+    grid-row: 2 / span 2;
+    grid-column: 3 / span 1;
+    border: solid blue;
+}
+
