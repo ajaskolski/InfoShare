@@ -1,0 +1,42 @@
+.grid-container {
+    display: grid;
+    grid-auto-rows: 50px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    grid-template-areas: "header header header header"
+    "tabela main main prawo"
+    "tabela footer footer footer";
+
+}
+.grid-container div{
+    background-color: greenyellow;
+    text-align: center;
+    font-size: 10px;
+
+}
+
+.grid-item1 {
+    grid-area: header;
+    padding: 20px 0;
+}
+
+.grid-item2 {
+    grid-area: tabela;
+    padding: 50px 0;
+
+}
+
+.grid-item3 {
+    grid-area: main;
+    padding: 20px 0;
+}
+
+.grid-item4 {
+    grid-area: prawo;
+    padding: 20px 0;
+}
+
+.grid-item5 {
+    grid-area: footer;
+    padding: 20px 0;
+}
