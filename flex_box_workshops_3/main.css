@@ -11,7 +11,6 @@
     list-style-type: none;
     background-color: yellow;
     margin: 5px;
-    height: auto;
 }
 
 .site-nav-flex-item a {
@@ -22,6 +21,5 @@
     background-color: greenyellow;
     text-decoration: underline;
     font-weight: bold;
-    width: auto;
 }
 
