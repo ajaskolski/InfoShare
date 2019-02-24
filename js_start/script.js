@@ -150,8 +150,8 @@ var logins = [
 var rentedItemsIds = [2, 5, 29, 32, 34];
 var items = [
     {id: 1, name: 'Konewka'},
-    {id: 2, name: 'Łopata'},
     {id: 3, name: 'Szlauf'},
+    {id: 2, name: 'Łopata'},
     {id: 4, name: 'Grabki'},
     {id: 5, name: 'Doniczka1'},
     {id: 6, name: 'Sweter'},
@@ -160,17 +160,26 @@ var items = [
     {id: 38, name: 'Rura'}
 ];
 
-// var i;
-// for(i=0; i < items.length; i++){
-//     items[i].isAvailable = "isAvailable";
-//     if(rentedItemsIds.includes(items[i].id) ){
-//         items[i].isAvailable = "false";
-//     }
-//     else{
-//         items[i].isAvailable = "true";
-//     }
-//     console.log(items[i]);
-// }
+var i;
+for(i=0; i < items.length; i++){
+    items[i].isAvailable = "isAvailable";
+    if(rentedItemsIds.includes(items[i].id) ){
+        items[i].isAvailable = "false";
+    }
+    else{
+        items[i].isAvailable = "true";
+    }
+    //console.log(items[i]);
+}
+
+var rentedArray = [];
+for(i=0; i < items.length; i++){
+    if(items[i].isAvailable === "false") {
+        rentedArray.push(items[i]);
+    }
+}
+
+console.log(rentedArray.reverse());
 
 
 /* TODO: 3a. Wyświtl obiekt użytkownika nieposiadającego hasła w konsoli
@@ -214,7 +223,7 @@ var persons = [
 //     if(persons[i].login.charAt(0) === "A" || persons[i].login.charAt(0) === 'W'){
 //         array.push(persons[i]);
 //         persons.splice(i, 1);
-//         i--; //decrement i IF we remove an item//
+//         i--;
 //         }
 // }
 //
@@ -292,27 +301,27 @@ var people = [
 
 // TODO: 7. Napisz funkcję, która przerobi zdanie "ala ma kota" na zdanie "Ala Ma Kota".
 
-var string = "ala ma kota";
-
-string = string.split(' ');
-
-var i;
-var z;
-var newword = "";
-
-for(i = 0; i < string.length; i++){
-    for(z = 0; z < string[i].length; z++){
-        if(z === 0){
-            newword = newword + string[i].charAt(z).toUpperCase();
-        }else{
-            newword = newword + string[i].charAt(z);
-        }
-    }
-    newword = newword + ' ';
-}
-newword = newword.toString();
-
-console.log(newword);
+// var string = "ala ma kota";
+//
+// string = string.split(' ');
+//
+// var i;
+// var z;
+// var newword = "";
+//
+// for(i = 0; i < string.length; i++){
+//     for(z = 0; z < string[i].length; z++){
+//         if(z === 0){
+//             newword = newword + string[i].charAt(z).toUpperCase();
+//         }else{
+//             newword = newword + string[i].charAt(z);
+//         }
+//     }
+//     newword = newword + ' ';
+// }
+// newword = newword.toString();
+//
+// console.log(newword);
 
 
 
