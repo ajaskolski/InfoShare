@@ -160,26 +160,26 @@ var items = [
     {id: 38, name: 'Rura'}
 ];
 
-var i;
-for(i=0; i < items.length; i++){
-    items[i].isAvailable = "isAvailable";
-    if(rentedItemsIds.includes(items[i].id) ){
-        items[i].isAvailable = "false";
-    }
-    else{
-        items[i].isAvailable = "true";
-    }
-    //console.log(items[i]);
-}
-
-var rentedArray = [];
-for(i=0; i < items.length; i++){
-    if(items[i].isAvailable === "false") {
-        rentedArray.push(items[i]);
-    }
-}
-
-console.log(rentedArray.reverse());
+// var i;
+// for(i=0; i < items.length; i++){
+//     items[i].isAvailable = "isAvailable";
+//     if(rentedItemsIds.includes(items[i].id) ){
+//         items[i].isAvailable = "false";
+//     }
+//     else{
+//         items[i].isAvailable = "true";
+//     }
+//     //console.log(items[i]);
+// }
+//
+// var rentedArray = [];
+// for(i=0; i < items.length; i++){
+//     if(items[i].isAvailable === "false") {
+//         rentedArray.push(items[i]);
+//     }
+// }
+//
+// console.log(rentedArray.reverse());
 
 
 /* TODO: 3a. Wyświtl obiekt użytkownika nieposiadającego hasła w konsoli
@@ -216,6 +216,34 @@ var persons = [
     {login: 'Agatka', hobby: ['poker', 'taniec']},
 ];
 
+var hobbiesMap = {};
+for(var i = 0; i < persons.length; i++) {
+    for(var j = 0; j < persons[i].hobby.length; j++) {
+        if(!hobbiesMap.hasOwnProperty(persons[i].hobby[j])) {
+            hobbiesMap[persons[i].hobby[j]] = [persons[i].login];
+        } else {
+            hobbiesMap[persons[i].hobby[j]].push(persons[i].login);
+        }
+    }
+}
+
+var hobbies = Object.keys(hobbiesMap);
+for(var i = 0; i < hobbies.length; i++) {
+    if(hobbiesMap[hobbies[i]].length > 1) {
+        console.log(hobbiesMap[hobbies[i]].join(', ') + ' maja wspólne hobby ' + hobbies[i]);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
 // var i;
 // var array = [];
 //
@@ -231,6 +259,9 @@ var persons = [
 //
 //
 // console.log('Nowa tablice \n', array);
+
+
+
 
 
 var people = [
@@ -323,9 +354,15 @@ var people = [
 //
 // console.log(newword);
 
-
-
-
-
+// var a = "ala ma kota"
+//
+// function alA(x) {
+//     var b = x.split(" ");
+//     for (var i = 0; i < b.length; i++) {
+//         b[i]=b[i].replace(b[i].charAt(0),b[i].charAt(0).toUpperCase())
+//     }
+//     console.log(b.join(" "))
+// }
+// alA(a);
 
 
